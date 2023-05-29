@@ -7,17 +7,18 @@
 # Friederike Fasterling-Nesselbosch, 2022
 # Léonie Bouchat <lbo@odoo.com>, 2022
 # Martin Trigaux, 2023
-# Sergio Zanchetta <primes2h@gmail.com>, 2023
 # Luca Carlo, 2023
 # Sebastiano Picchi, 2023
+# Sergio Zanchetta <primes2h@gmail.com>, 2023
+# Marianna Ciofani, 2023
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-14 05:51+0000\n"
+"POT-Creation-Date: 2023-05-23 08:22+0000\n"
 "PO-Revision-Date: 2022-09-22 05:53+0000\n"
-"Last-Translator: Sebastiano Picchi, 2023\n"
+"Last-Translator: Marianna Ciofani, 2023\n"
 "Language-Team: Italian (https://app.transifex.com/odoo/teams/41243/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -623,7 +624,7 @@ msgstr ""
 #: code:addons/mail/static/src/models_data/emoji_data.js:0
 #, python-format
 msgid "8:00"
-msgstr ""
+msgstr "8:00"
 
 #. module: mail
 #. odoo-javascript
@@ -2780,7 +2781,7 @@ msgstr "Per le notifiche posta in arrivo / e-mail il cliente è obbligatorio"
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.res_config_settings_view_form
 msgid "Customize the look and feel of automated emails"
-msgstr ""
+msgstr "Personalizza l'aspetto delle e-mail automatiche"
 
 #. module: mail
 #. odoo-javascript
@@ -4074,13 +4075,6 @@ msgstr "Ottieni credenziali API Outlook"
 #: model_terms:ir.ui.view,arch_db:mail.res_config_settings_view_form
 msgid "Gmail Credentials"
 msgstr "Credenziali Gmail"
-
-#. module: mail
-#. odoo-python
-#: code:addons/mail/models/res_users.py:0
-#, python-format
-msgid "Go to the configuration panel"
-msgstr "Apri pannello di configurazione"
 
 #. module: mail
 #: model:ir.model.fields.selection,name:mail.selection__mail_channel__channel_type__group
@@ -5795,6 +5789,13 @@ msgid "Mark as done"
 msgstr "Imposta a completata"
 
 #. module: mail
+#. odoo-javascript
+#: code:addons/mail/static/src/models/call_settings_menu.js:0
+#, python-format
+msgid "Media devices unobtainable"
+msgstr ""
+
+#. module: mail
 #: model:mail.activity.type,name:mail.mail_activity_data_meeting
 msgid "Meeting"
 msgstr "Appuntamento"
@@ -6836,6 +6837,8 @@ msgstr ""
 #, python-format
 msgid "Only administrators are allowed to use grouped read on message model"
 msgstr ""
+"L'utilizzo della lettura raggruppata  nel modello messaggio è consentita "
+"solo agli amministratori."
 
 #. module: mail
 #. odoo-python
@@ -7882,7 +7885,7 @@ msgstr "Nome file resoconto"
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_mail_activity__request_partner_id
 msgid "Requesting Partner"
-msgstr ""
+msgstr "Partner richiedente"
 
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_res_users__res_users_settings_ids
@@ -7902,12 +7905,12 @@ msgstr "Conferma reimpostazione"
 #. module: mail
 #: model:ir.actions.act_window,name:mail.mail_template_reset_action
 msgid "Reset Mail Template"
-msgstr ""
+msgstr "Ripristina modello e-mail"
 
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.email_template_form
 msgid "Reset Template"
-msgstr ""
+msgstr "Ripristina modello"
 
 #. module: mail
 #. odoo-javascript
@@ -7953,7 +7956,7 @@ msgstr "Riprova"
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.res_config_settings_view_form
 msgid "Review All Templates"
-msgstr ""
+msgstr "Visualizza tutti i modelli"
 
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_mail_mail__body_content
@@ -8022,16 +8025,16 @@ msgid "SSL"
 msgstr "SSL"
 
 #. module: mail
-#: model:ir.model.fields,field_description:mail.field_fetchmail_server__is_ssl
-msgid "SSL/TLS"
-msgstr "SSL/TLS"
-
-#. module: mail
 #. odoo-javascript
 #: code:addons/mail/static/src/models/call_settings_menu.js:0
 #, python-format
 msgid "SSL might not be set up properly"
 msgstr ""
+
+#. module: mail
+#: model:ir.model.fields,field_description:mail.field_fetchmail_server__is_ssl
+msgid "SSL/TLS"
+msgstr "SSL/TLS"
 
 #. module: mail
 #. odoo-javascript
@@ -9009,7 +9012,7 @@ msgstr ""
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_mail_template__description
 msgid "Template description"
-msgstr ""
+msgstr "Descrizione modello"
 
 #. module: mail
 #. odoo-python
@@ -10092,7 +10095,7 @@ msgstr "Tipo vista"
 #: code:addons/mail/static/src/components/attachment_image/attachment_image.xml:0
 #, python-format
 msgid "View image"
-msgstr ""
+msgstr "Visualizza immagine"
 
 #. module: mail
 #. odoo-javascript
@@ -10371,17 +10374,6 @@ msgstr "È possibile aprire solo il profilo di canali esistenti."
 #, python-format
 msgid "You can only open the profile of existing users."
 msgstr "È possibile aprire solo profili di utenti esistenti."
-
-#. module: mail
-#. odoo-python
-#: code:addons/mail/models/res_users.py:0
-#, python-format
-msgid ""
-"You cannot create a new user from here.\n"
-" To create new user please go to configuration panel."
-msgstr ""
-"Non puoi creare un nuovo utente da qui.\n"
-"Accedi al pannello di configurazione per aggiungere un nuovo utente."
 
 #. module: mail
 #. odoo-python
@@ -24081,13 +24073,6 @@ msgstr ""
 
 #. module: mail
 #. odoo-javascript
-#: code:addons/mail/static/src/models/call_settings_menu.js:0
-#, python-format
-msgid "Media devices unobtainable"
-msgstr ""
-
-#. module: mail
-#. odoo-javascript
 #: code:addons/mail/static/src/models_data/emoji_data.js:0
 #: code:addons/mail/static/src/models_data/emoji_data.js:0
 #, python-format
@@ -25477,7 +25462,7 @@ msgstr "adesso"
 #: code:addons/mail/static/src/models_data/emoji_data.js:0
 #, python-format
 msgid "numbers"
-msgstr ""
+msgstr "numeri"
 
 #. module: mail
 #. odoo-javascript
@@ -25523,7 +25508,7 @@ msgstr ""
 #: code:addons/mail/static/src/models_data/emoji_data.js:0
 #, python-format
 msgid "ocean"
-msgstr ""
+msgstr "oceano"
 
 #. module: mail
 #. odoo-javascript
@@ -25639,7 +25624,7 @@ msgstr ""
 #: code:addons/mail/static/src/models_data/emoji_data.js:0
 #, python-format
 msgid "old man"
-msgstr ""
+msgstr "uomo anziano"
 
 #. module: mail
 #. odoo-javascript
@@ -36071,4 +36056,4 @@ msgstr ""
 #: code:addons/mail/static/src/models_data/emoji_data.js:0
 #, python-format
 msgid "ココ"
-msgstr ""
+msgstr "ココ"

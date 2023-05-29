@@ -1745,24 +1745,32 @@ class TestAccountMoveOutInvoiceOnchanges(AccountTestInvoicingCommon):
                 'amount_currency': 1000.0,
                 'debit': 1000.0,
                 'credit': 0.0,
+                'tax_tag_invert': False,
+                'tax_base_amount': 0.0,
             },
             {
                 **self.product_line_vals_2,
                 'amount_currency': 200.0,
                 'debit': 200.0,
                 'credit': 0.0,
+                'tax_tag_invert': False,
+                'tax_base_amount': 0.0,
             },
             {
                 **self.tax_line_vals_1,
                 'amount_currency': 180.0,
                 'debit': 180.0,
                 'credit': 0.0,
+                'tax_tag_invert': False,
+                'tax_base_amount': 1200.0,
             },
             {
                 **self.tax_line_vals_2,
                 'amount_currency': 30.0,
                 'debit': 30.0,
                 'credit': 0.0,
+                'tax_tag_invert': False,
+                'tax_base_amount': 200.0,
             },
             {
                 **self.term_line_vals_1,
@@ -1771,6 +1779,8 @@ class TestAccountMoveOutInvoiceOnchanges(AccountTestInvoicingCommon):
                 'debit': 0.0,
                 'credit': 1410.0,
                 'date_maturity': move_reversal.date,
+                'tax_tag_invert': False,
+                'tax_base_amount': 0.0,
             },
         ], {
             **self.move_vals,
@@ -3423,3 +3433,23 @@ class TestAccountMoveOutInvoiceOnchanges(AccountTestInvoicingCommon):
         self.assertEqual(move.currency_id, self.company_data['currency'])
         move.journal_id = second_journal
         self.assertEqual(move.currency_id, self.currency_data['currency'])
+
+    @freeze_time('2023-01-01')
+    def test_change_first_journal_move_sequence(self):
+        """Invoice name should not be reset when posting the invoice"""
+        new_sale_journal = self.company_data['default_journal_sale'].copy()
+        invoice = self.env['account.move'].with_context(default_move_type='out_invoice').create({
+            'journal_id': new_sale_journal.id,
+            'partner_id': self.partner_a.id,
+            'name': 'INV1/2023/00010',
+            'invoice_line_ids': [
+                Command.create({
+                    'name': 'My super product.',
+                    'quantity': 1.0,
+                    'price_unit': 750.0,
+                    'account_id': self.company_data['default_account_revenue'].id,
+                })
+            ]
+        })
+        invoice.action_post()
+        self.assertEqual(invoice.name, 'INV1/2023/00010')

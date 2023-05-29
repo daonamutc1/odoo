@@ -6942,7 +6942,7 @@ msgstr "Moje podjetje"
 #: model_terms:ir.ui.view,arch_db:website.website_visitor_view_tree
 #, python-format
 msgid "Name"
-msgstr "Naziv"
+msgstr "Ime in priimek"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.searchbar_input_snippet_options
@@ -9772,6 +9772,15 @@ msgid ""
 msgstr ""
 "To polje bo shranilo trenutni `arch_db`, preden bo nanj pisalo.\n"
 "                                                                         Uporabno za (mehko) ponastavitev pokvarjenega pogleda."
+
+#. module: website
+#. odoo-javascript
+#: code:addons/website/static/src/js/editor/snippets.options.js:0
+#, python-format
+msgid ""
+"This font already exists, you can only add it as a local font to replace the"
+" server version."
+msgstr ""
 
 #. module: website
 #. odoo-javascript
